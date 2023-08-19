@@ -115,9 +115,6 @@ export default function Home() {
       });
     };
     if (walletConnected) listen();
-    if (!walletConnected) {
-      connectWallet();
-    }
   }, [walletConnected]);
 
   const newCapacity = async () => {
