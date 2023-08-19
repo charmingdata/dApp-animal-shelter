@@ -10,7 +10,7 @@ import { MY_CONTRACT_ADDRESS, abi } from "../constants";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [walletConnected, setWalletConnected] = useState(false);
+  const [walletConnected, setWalletConnected] = useState(true);
   const web3ModalRef = useRef();
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
