@@ -311,7 +311,7 @@ export default function Home() {
           </div>
           <h1 className={styles.title}>Welcome to the Animal Shelter dApp!</h1>
           <div className={styles.description}>
-            A contract that keeps track of animal shelters' capacity.
+            A contract that keeps track of animal shelters capacity.
           </div>
           <br></br>
           <div>
