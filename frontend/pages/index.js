@@ -61,7 +61,7 @@ export default function Home() {
       initializeWeb3Modal();
       connectWallet();
     }
-  }, [walletConnected]);
+  }, [walletConnected, connectWallet]);
 
   const renderButton = () => {
     if (walletConnected) {
