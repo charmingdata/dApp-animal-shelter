@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Web3Modal from "web3modal";
 import { providers, Contract, utils, BigNumber } from "ethers";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import { MY_CONTRACT_ADDRESS, abi } from "../constants";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,14 +22,14 @@ export default function Home() {
   const [shelterId, setShelterId] = useState(0);
   const [shelterId2, setShelterId2] = useState(0);
 
-  const connectWallet = async () => {
+  const connectWallet = useCallback(async () => {
     try {
       await getProviderOrSigner();
       setWalletConnected(true);
     } catch (err) {
       console.error(err);
     }
-  };
+  }, []);
 
   const getProviderOrSigner = async (needSigner = false) => {
     const provider = await web3ModalRef.current.connect();
